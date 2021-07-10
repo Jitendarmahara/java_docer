@@ -1,0 +1,63 @@
+git remote add origin <style>
+  body{
+    background : url(https://i0.wp.com/stelligent.com/wp-content/uploads/2017/02/docker-swarm-hero2.png?fit=1200%2C1182&ssl=1);
+    background-color: rgb(61, 42, 165);
+    background-size: 100% 100%;
+  }
+  header {
+  padding: 60px;
+  text-align:center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+h2{
+  margin-left: 100px;
+  font-size: 50px;
+}
+input{
+  width: 22%;
+  height: 44%;
+  border: chocolate;
+  border-radius: 4px;
+   }
+input::placeholder{
+  text-align: center;
+}
+button{
+  background-color: darkgray;
+  padding: 15px 32px;
+  text-align: center;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(red, green, blue, alpha);
+}
+button:hover{
+  background-color: skyblue;
+}
+
+</style>
+
+<script>
+  function lw() {
+var i = document.getElementById("inp").value;
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://192.168.99.102/cgi-bin/iiec.py?x=" + i, true)
+xhr.send();
+xhr.onload = function(){
+var output = xhr.responseText;
+document.getElementById("id2").innerHTML = output;
+}
+
+
+}
+</script>
+<div id="f">
+<pre>
+  <header> welcome to docker world!</header></br>
+  <h2> [rootlocalhost ~ ]# <input id ="inp" placeholder="enter your dokcer cammand"/></h2>
+  <h3 style="color: white"> <div id="id2"></div></h3>
+</pre>
+<button onclick="lw()">click</button>
+
+</div>
